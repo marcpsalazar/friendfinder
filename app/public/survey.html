@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+
+    <title>FriendFinder</title>
+
+  </head>
+
+<body>
+
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Survey Questions</h2>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <a>
+          <button type="button" class='btn btn-lg btn-primary' id="reset">
+            <h4>
+              <span class="glyphicon glyphicon-list-alt"></span>Clear
+            </h4>
+          </button>
+        </a>
+
+        <a href="/">
+          <button type="button" class='btn btn-lg btn-primary' id="reset">
+            <h4>
+              <span class="glyphicon glyphicon-list-alt"></span>Home
+            </h4>
+          </button>
+        </a>
+
+      </div>
+    </div>
+    <hr>
+    <h3>
+      <strong>About You</strong>
+    </h3>
+    <h4>Name</h4>
+    <input type="text" id="name" class="form-control" required>
+    <h4>link to your photo</h4>
+    <input type="text" id="photo" class="form-control" required>
+    <hr>
+
+    <h3>
+      <strong>Question 1</strong>
+    </h3>
+    <h4>You feel as though the world is your oyster...or Big Mac</h4>
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="q1">Options</label>
+  </div>
+  <select class="custom-select" id="q1">
+    <option selected>Choose...</option>
+    <option value="1">1 Strongly Disagree</option>
+    <option value="2">2 Slightly Disagree</option>
+    <option value="3">3 Niether Agree nor Disagree</option>
+    <option value="4">4 Slightly Agree</option>
+    <option value="5">5 Strongly Agree</option>
+  </select>
+    </div>
+        <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 2</strong>
+  </h3>
+  <h4>You frequently "have a bad feeling about this."</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q2">Options</label>
+</div>
+<select class="custom-select" id="q2">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+<hr>
+
+<h3>
+  <strong>Question 3</strong>
+</h3>
+<h4>You wonder why men don't wear more hats.</h4>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<label class="input-group-text" for="q3">Options</label>
+</div>
+<select class="custom-select" id="q3">
+<option selected>Choose...</option>
+<option value="1">1 Strongly Disagree</option>
+<option value="2">2 Slightly Disagree</option>
+<option value="3">3 Niether Agree nor Disagree</option>
+<option value="4">4 Slightly Agree</option>
+<option value="5">5 Strongly Agree</option>
+</select>
+</div>
+    <ul class="chosen-results"></ul>
+
+<hr>
+
+<h3>
+  <strong>Question 4</strong>
+</h3>
+<h4>You're very fond of Wensleydale cheese.</h4>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<label class="input-group-text" for="q4">Options</label>
+</div>
+<select class="custom-select" id="q4">
+<option selected>Choose...</option>
+<option value="1">1 Strongly Disagree</option>
+<option value="2">2 Slightly Disagree</option>
+<option value="3">3 Niether Agree nor Disagree</option>
+<option value="4">4 Slightly Agree</option>
+<option value="5">5 Strongly Agree</option>
+</select>
+</div>
+    <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 5</strong>
+  </h3>
+  <h4>You would never cross the streams.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q5">Options</label>
+</div>
+<select class="custom-select" id="q5">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 6</strong>
+  </h3>
+  <h4>You are greatful that curling is an olympic sport.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q6">Options</label>
+</div>
+<select class="custom-select" id="q6">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 7</strong>
+  </h3>
+  <h4>Your favorite Will Ferrell character is Mugatu.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q7">Options</label>
+</div>
+<select class="custom-select" id="q7">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 8</strong>
+  </h3>
+  <h4>You consider yourself relentlessly self-improving and like to claim that you invented the question mark.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q8">Options</label>
+</div>
+<select class="custom-select" id="q8">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 9</strong>
+  </h3>
+  <h4>You believe most conspiracy theories.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q9">Options</label>
+</div>
+<select class="custom-select" id="q9">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+  <hr>
+
+  <h3>
+    <strong>Question 10</strong>
+  </h3>
+  <h4>You pity the fool.</h4>
+  <div class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="q10">Options</label>
+</div>
+<select class="custom-select" id="q10">
+  <option selected>Choose...</option>
+  <option value="1">1 Strongly Disagree</option>
+  <option value="2">2 Slightly Disagree</option>
+  <option value="3">3 Niether Agree nor Disagree</option>
+  <option value="4">4 Slightly Agree</option>
+  <option value="5">5 Strongly Agree</option>
+</select>
+  </div>
+      <ul class="chosen-results"></ul>
+
+<br>
+<br>
+
+<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+<br>
+<div class="row">
+  <div class="col-md-3 mx-auto">
+    <a>
+      <button type="button" class='btn btn-lg btn-primary' id="reset">
+        <h4>
+          <span class="glyphicon glyphicon-list-alt"></span>Clear
+        </h4>
+      </button>
+    </a>
+
+    <a href="/">
+      <button type="button" class='btn btn-lg btn-primary' id="reset">
+        <h4>
+          <span class="glyphicon glyphicon-list-alt"></span>Home
+        </h4>
+      </button>
+    </a>
+
+  </div>
+</div>
+<br>
+
+<div class="modal" tabindex="-1" role="dialog" id="theModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Your Match!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h2 id="matched"></h2>
+      <img id="matchedPic" src="" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+
+</footer>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+
+  <script type="text/javascript">
+
+    $('#submit').on('click', function(event) {
+			event.preventDefault();
+
+
+
+        var score = {
+				name: $('#name').val().trim(),
+				photo: $('#photo').val().trim(),
+				scores:[
+					$('#q1').val().trim(),
+					$('#q2').val().trim(),
+					$('#q3').val().trim(),
+					$('#q4').val().trim(),
+					$('#q5').val().trim(),
+					$('#q6').val().trim(),
+					$('#q7').val().trim(),
+					$('#q8').val().trim(),
+					$('#q9').val().trim(),
+					$('#q10').val().trim()
+				]
+			};
+
+      $.post("/api/friends", score, function(data) {
+
+          console.log(data);
+
+	    		$("#matched").text(data.name);
+	    		$('#matchedPic').attr("src", data.photo);
+
+		    	$("#theModal").modal('toggle');
+
+          $("#name", "#photo", "#q1", "#q2", "#q3", "#q4", "#q5", "#q6", "#q8", "#q9", "#q10").empty();
+        });
+
+  });
+
+
+var reset = function() {
+  location.reload();
+}
+$("#reset").click(function() {
+  reset();
+});
+
+
+
+
+
+
+  </script>
+
+
+</html>
